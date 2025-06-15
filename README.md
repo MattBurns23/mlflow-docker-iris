@@ -1,33 +1,95 @@
-# MLflow Docker Project: Iris Classification
+# 🧪 MLflow Docker Iris Project
 
-This is a clean, portfolio-ready machine learning project using:
-- **scikit-learn** to train a Random Forest model on the Iris dataset
-- **MLflow** to track metrics, parameters, and the trained model
-- **Docker** for reproducible container-based execution
+Train, track, and version a machine learning model using `scikit-learn`, `MLflow`, and `Docker` — all on the classic Iris dataset.
 
-## 🔍 What It Does
-- Loads and preprocesses the classic Iris dataset
-- Splits it into training/testing sets
-- Trains a `RandomForestClassifier`
-- Logs model, metrics, and an input schema using MLflow
+This project demonstrates an end-to-end ML workflow:
+- Preprocessing with pandas
+- Modeling with RandomForest
+- Experiment tracking with MLflow
+- Reproducibility via Docker
 
-## 🐳 How to Run with Docker
+---
 
-```bash
+## 🚀 Quick Start
+
+### 🔧 Run with Docker
+
 docker build -t mlflow-docker .
-docker run mlflow-docker
+docker run -p 5000:5000 mlflow-docker
+
+### 🐍 Or run locally
+
+pip install -r requirements.txt
+python main.py
+
+---
+
+## 📂 Project Structure
+
+mlflow_docker_project/
+├── main.py           # Trains and logs a model with MLflow
+├── requirements.txt  # Python dependencies
+├── Dockerfile        # Reproducible environment
+├── README.md         # Project overview
+└── mlruns/           # MLflow experiment tracking (auto-generated)
+
+
+---
+
+## 📊 What It Does
+
+- Loads and preprocesses the Iris dataset
+- Trains a RandomForestClassifier
+- Logs parameters, metrics, and the model itself to MLflow
+- Supports input signature + example for reproducible deployment
+- Containerized using Docker for cross-platform repeatability
+
+---
+
+## 🔍 Sample Output
+
+Logged model with accuracy: 1.0
+
+MLflow run is stored in `mlruns/` and viewable via:
+
+```
+mlflow ui
 ```
 
-## 📦 What's Included
-- `main.py`: Your full training and MLflow logging script
-- `Dockerfile`: Container setup
-- `requirements.txt`: All dependencies
-- `README.md`: Project documentation
+ ---
 
-## 🧠 Why It Matters
-This project demonstrates how to:
-- Train an ML model
-- Track and reproduce experiments with MLflow
-- Package everything in Docker for portability and deployment
+## 🧠 Why This Project?
 
-Ideal for showcasing in technical interviews or portfolios.
+This project is designed to showcase:
+
+- Practical use of MLflow for MLOps and experiment tracking
+- How to train and deploy an ML model in a reproducible container
+- Real-world tools used by companies like Canonical, DataRobot, and Hugging Face
+
+---
+
+## 🛠️ Tools Used
+
+- Python 3
+- Pandas / Scikit-learn
+- MLflow
+- Docker
+
+---
+
+## 📚 Inspired By
+
+This project was built and customized as a professional portfolio piece to demonstrate machine learning workflow best practices with tools used in modern MLOps pipelines.
+
+---
+
+## 👤 Author
+
+Matthew Burns  
+📫 [LinkedIn](https://www.linkedin.com/in/mattburns23) • [GitHub](https://github.com/MattBurns23)
+
+---
+
+## 📝 License
+
+MIT — feel free to fork and build upon it.
