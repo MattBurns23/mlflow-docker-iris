@@ -13,15 +13,15 @@ This project demonstrates an end-to-end ML workflow:
 ## 🚀 Quick Start
 
 ### 🔧 Run with Docker
-
+```
 docker build -t mlflow-docker .
 docker run -p 5000:5000 mlflow-docker
-
+```
 ### 🐍 Or run locally
-
+```
 pip install -r requirements.txt
 python main.py
-
+```
 ---
 
 ## 📂 Project Structure
