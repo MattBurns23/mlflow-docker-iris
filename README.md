@@ -25,14 +25,14 @@ python main.py
 ---
 
 ## 📂 Project Structure
-
+```
 mlflow_docker_project/
 ├── main.py           # Trains and logs a model with MLflow
 ├── requirements.txt  # Python dependencies
 ├── Dockerfile        # Reproducible environment
 ├── README.md         # Project overview
 └── mlruns/           # MLflow experiment tracking (auto-generated)
-
+```
 
 ---
 
